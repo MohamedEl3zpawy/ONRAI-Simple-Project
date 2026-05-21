@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart - ON-RAI Gaming</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .cart-table{width:100%;border-collapse:collapse}
+    .cart-table th,.cart-table td{padding:.75rem;border:1px solid #eaeaea;text-align:left}
+    .cart-actions{display:flex;gap:.5rem;align-items:center}
+    .total-row{font-weight:700}
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">ON-RAI Gaming</a>
+      <div class="nav-right">
+        <button id="menuBtn" class="nav-btn">☰ Menu</button>
+        <a href="cart.html" id="cartLink" class="nav-btn">Cart (<span id="cart-count">0</span>)</a>
+        <button id="loginBtn" class="nav-btn">Login</button>
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="build.html">Build Configurator</a></li>
+        <li><a href="peripherals.html">Peripherals</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Your Cart</h1>
+    <table class="cart-table" id="cartTable">
+      <thead>
+        <tr><th>Item</th><th>Price</th><th>Qty</th><th>Subtotal</th><th></th></tr>
+      </thead>
+      <tbody></tbody>
+      <tfoot>
+        <tr class="total-row"><td colspan="3">Subtotal</td><td id="subTotal">$0.00</td><td></td></tr>
+        <tr class="total-row"><td colspan="3">Tax</td><td id="taxTotal">$0.00</td><td></td></tr>
+        <tr class="total-row"><td colspan="3">Shipping</td><td id="shippingTotal">$0.00</td><td></td></tr>
+        <tr class="total-row"><td colspan="3">Total</td><td id="cartTotal">$0.00</td><td></td></tr>
+      </tfoot>
+    </table>
+    <p style="margin-top:1rem;color:#666;">Simple checkout flow: choose items, update quantity, then press Checkout to place the order.</p>
+    <div style="margin-top:1rem;display:flex;gap:1rem;">
+      <button id="checkoutBtn" class="btn">Buy Now</button>
+      <button id="clearCart" class="btn btn-secondary">Clear Cart</button>
+    </div>
+    <p id="checkoutMessage" style="margin-top:.75rem;display:none"></p>
+  </main>
+
+  <div id="sidemenu">
+    <div class="close"><button id="closeMenu">✖</button></div>
+    <a href="index.html">Home</a>
+    <a href="build.html">Build Configurator</a>
+    <a href="peripherals.html">Peripherals</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+</div>
+
+  <div id="loginModal" class="modal">
+    <div class="panel">
+      <h3>Login</h3>
+      <form id="loginForm">
+        <div class="form-group"><label for="login-user">Username</label><input id="login-user" name="user" required></div>
+        <div class="form-group"><label for="login-pass">Password</label><input id="login-pass" name="pass" type="password" required></div>
+        <div style="display:flex;gap:.5rem;margin-top:.75rem;">
+          <button type="submit" class="btn">Login</button>
+          <button type="button" id="loginCancel" class="btn btn-secondary">Cancel</button>
+        </div>
+        <p id="loginMessage" style="margin-top:.5rem;color:#c00;display:none"></p>
+      </form>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <footer>
+    <p>&copy; 2024 ON-RAI Gaming Setup. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - ON-RAI Gaming</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">ON-RAI Gaming</a>
+      <div class="nav-right">
+        <button id="menuBtn" class="nav-btn">☰ Menu</button>
+        <a href="cart.html" id="cartLink" class="nav-btn">Cart (<span id="cart-count">0</span>)</a>
+        <button id="loginBtn" class="nav-btn">Login</button>
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="build.html">Build Configurator</a></li>
+        <li><a href="peripherals.html">Peripherals</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="hero hero-img" style="--hero-bg: url('images/ChatGPT Image May 15, 2026, 01_45_26 AM.png')">
+        <h1>Contact Us</h1>
+        <p>Get in touch with our team. We're here to help 24/7</p>
+      </section>
+
+      <section class="contact-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:3rem; margin-bottom:3rem;">
+        <div>
+          <h2>Send us a Message</h2>
+          <form id="contactForm" class="contact-form">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+            <p id="contactMessage" style="margin-top:.5rem;display:none"></p>
+          </form>
+        </div>
+
+        <div>
+          <h2>Contact Information</h2>
+          <div class="info-box">
+            <h4>Email</h4>
+            <p><a href="mailto:support@onrai-gaming.com">support@onrai-gaming.com</a></p>
+          </div>
+          <div class="info-box">
+            <h4>Phone</h4>
+            <p><a href="tel:01099048653">01099048653</a></p>
+          </div>
+          <div class="info-box">
+            <h4>Headquarters</h4>
+            <p>ON-RAI Gaming HQ<br>Alexandria, Egypt</p>
+          </div>
+          <div class="info-box">
+            <h4>Support Hours</h4>
+            <p>24/7 Available<br>Response within 2 hours</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Frequently Asked Questions</h2>
+        <div style="display:grid; gap:1.5rem;">
+          <div class="info-box">
+            <h4>How long does it take to build and ship my custom gaming rig?</h4>
+            <p>5-7 business days to build and test. Standard shipping takes 3-5 business days after that.</p>
+          </div>
+          <div class="info-box">
+            <h4>Do you offer warranty on gaming builds?</h4>
+            <p>Yes! 1-year comprehensive warranty on all components. Extended warranty options available.</p>
+          </div>
+          <div class="info-box">
+            <h4>Can I upgrade my gaming rig after purchase?</h4>
+            <p>Absolutely! We can help upgrade any component with full compatibility support.</p>
+          </div>
+          <div class="info-box">
+            <h4>What's your return policy?</h4>
+            <p>30-day satisfaction guarantee. Full refund if not satisfied (less shipping costs).</p>
+          </div>
+          <div class="info-box">
+            <h4>Do you ship internationally?</h4>
+            <p>Yes, we ship to most countries worldwide. Contact us for a shipping quote.</p>
+          </div>
+          <div class="info-box">
+            <h4>Can I get a custom rig with my specific budget?</h4>
+            <p>Yes! Tell us your goals and budget, and we'll build the best system possible.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div id="sidemenu">
+    <div class="close"><button id="closeMenu">✖</button></div>
+    <a href="index.html">Home</a>
+    <a href="build.html">Build Configurator</a>
+    <a href="peripherals.html">Peripherals</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div id="loginModal" class="modal">
+    <div class="panel">
+      <h3>Login</h3>
+      <form id="loginForm">
+        <div class="form-group"><label for="login-user">Username</label><input id="login-user" name="user" required></div>
+        <div class="form-group"><label for="login-pass">Password</label><input id="login-pass" name="pass" type="password" required></div>
+        <div style="display:flex;gap:.5rem;margin-top:.75rem;">
+          <button type="submit" class="btn">Login</button>
+          <button type="button" id="loginCancel" class="btn btn-secondary">Cancel</button>
+        </div>
+        <p id="loginMessage" style="margin-top:.5rem;color:#c00;display:none"></p>
+      </form>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <footer>
+    <p>&copy; 2024 ON-RAI Gaming. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

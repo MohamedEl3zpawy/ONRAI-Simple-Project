@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - ON-RAI Gaming</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">ON-RAI Gaming</a>
+      <div class="nav-right">
+        <button id="menuBtn" class="nav-btn">☰ Menu</button>
+        <a href="cart.html" id="cartLink" class="nav-btn">Cart (<span id="cart-count">0</span>)</a>
+        <button id="loginBtn" class="nav-btn">Login</button>
+      </div>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="build.html">Build Configurator</a></li>
+        <li><a href="peripherals.html">Peripherals</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="hero">
+        <h1>Welcome to ON-RAI Gaming</h1>
+        <p>Your ultimate destination for gaming setups and rigs</p>
+      </section>
+
+      <section>
+        <h2>Featured Collections</h2>
+        <div class="grid grid-4">
+          
+          <div class="card">
+            <h4>Competitive FPS</h4>
+            <p class="price">$4,299</p>
+            <button class="btn add-to-cart" data-name="Competitive FPS" data-price="4299">ADD TO CART</button>
+          </div>
+
+          <div class="card">
+            <h4>4K Gaming</h4>
+            <p class="price">$3,999</p>
+            <button class="btn add-to-cart" data-name="4K Gaming" data-price="3999">ADD TO CART</button>
+          </div>
+
+          <div class="card">
+            <h4>Streaming Beast</h4>
+            <p class="price">$5,999</p>
+            <button class="btn add-to-cart" data-name="Streaming Beast" data-price="5999">ADD TO CART</button>
+          </div>
+
+          <div class="card">
+            <h4>Budget Gaming</h4>
+            <p class="price">$1,899</p>
+            <button class="btn add-to-cart" data-name="Budget Gaming" data-price="1899">ADD TO CART</button>
+          </div>
+
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div id="sidemenu">
+    <div class="close"><button id="closeMenu">✖</button></div>
+    <a href="index.html">Home</a>
+    <a href="build.html">Build Configurator</a>
+    <a href="peripherals.html">Peripherals</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div id="loginModal" class="modal">
+    <div class="panel">
+      <h3>Login</h3>
+      <form id="loginForm">
+        <div class="form-group"><label for="login-user">Username</label><input id="login-user" name="user" required></div>
+        <div class="form-group"><label for="login-pass">Password</label><input id="login-pass" name="pass" type="password" required></div>
+        <div style="display:flex;gap:.5rem;margin-top:.75rem;">
+          <button type="submit" class="btn">Login</button>
+          <button type="button" id="loginCancel" class="btn btn-secondary">Cancel</button>
+        </div>
+        <p id="loginMessage" style="margin-top:.5rem;color:#c00;display:none"></p>
+      </form>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <footer>
+    <p>&copy; 2026 ON-RAI Gaming. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js?v=2.0"></script>
+</body>
+</html>

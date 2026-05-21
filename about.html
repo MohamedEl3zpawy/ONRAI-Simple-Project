@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - ON-RAI Gaming</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">ON-RAI Gaming</a>
+      <div class="nav-right">
+        <button id="menuBtn" class="nav-btn">☰ Menu</button>
+        <a href="cart.html" id="cartLink" class="nav-btn">Cart (<span id="cart-count">0</span>)</a>
+        <button id="loginBtn" class="nav-btn">Login</button>
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="build.html">Build Configurator</a></li>
+        <li><a href="peripherals.html">Peripherals</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <section>
+        <h2>Our Mission</h2>
+        <p>At ON-RAI Gaming, we build custom gaming rigs with top-tier hardware. We deliver exceptional performance, reliability, and value for every gamer.</p>
+      </section>
+      <section>
+        <h2>Why Choose Us?</h2>
+        <div class="grid grid-4">
+          <div class="card">
+            <h4>Expert Configuration</h4>
+            <p>Components selected for perfect compatibility.</p>
+          </div>
+          <div class="card">
+            <h4>Quality Builds</h4>
+            <p>Tested for maximum gaming performance.</p>
+          </div>
+          <div class="card">
+            <h4>Expert Support</h4>
+            <p>24/7 support team available.</p>
+          </div>
+          <div class="card">
+            <h4>Full Customization</h4>
+            <p>Choose components and specifications.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div id="sidemenu">
+    <div class="close"><button id="closeMenu">✖</button></div>
+    <a href="index.html">Home</a>
+    <a href="build.html">Build Configurator</a>
+    <a href="peripherals.html">Peripherals</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div id="loginModal" class="modal">
+    <div class="panel">
+      <h3>Login</h3>
+      <form id="loginForm">
+        <div class="form-group"><label for="login-user">Username</label><input id="login-user" name="user" required></div>
+        <div class="form-group"><label for="login-pass">Password</label><input id="login-pass" name="pass" type="password" required></div>
+        <div style="display:flex;gap:.5rem;margin-top:.75rem;">
+          <button type="submit" class="btn">Login</button>
+          <button type="button" id="loginCancel" class="btn btn-secondary">Cancel</button>
+        </div>
+        <p id="loginMessage" style="margin-top:.5rem;color:#c00;display:none"></p>
+      </form>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <footer>
+    <p>&copy; 2024 ON-RAI Gaming Setup. All rights reserved.</p>
+    <p>Professional gaming rigs, built for performance.</p>
+    <p>Created by Mohamed Sameh | Registration No: 241002212</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

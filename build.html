@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Build Configurator - ON-RAI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">ON-RAI Gaming</a>
+      <div class="nav-right">
+        <button id="menuBtn" class="nav-btn">☰ Menu</button>
+        <a href="cart.html" id="cartLink" class="nav-btn">Cart (<span id="cart-count">0</span>)</a>
+        <button id="loginBtn" class="nav-btn">Login</button>
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="build.html" class="active">Build Configurator</a></li>
+        <li><a href="peripherals.html">Peripherals</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero hero-build">
+      <h1>Build Configurator</h1>
+      <p>Choose CPU, GPU and RAM to build your custom rig. Price updates instantly.</p>
+    </section>
+
+    <section>
+      <form id="buildForm">
+        <div class="form-group">
+          <label for="cpu">CPU</label>
+          <select id="cpu">
+            <option value="0">Select CPU</option>
+            <option value="400">Intel Core i9-13900K (+$400)</option>
+            <option value="300">AMD Ryzen 9 7950X (+$300)</option>
+            <option value="180">Intel Core i7-13700K (+$180)</option>
+            <option value="120">Intel Core i5-13600K (+$120)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="gpu">GPU</label>
+          <select id="gpu">
+            <option value="0">Select GPU</option>
+            <option value="1800">RTX 4090 (+$1800)</option>
+            <option value="1200">RTX 4080 (+$1200)</option>
+            <option value="700">RTX 4070 (+$700)</option>
+            <option value="350">RTX 4060 (+$350)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="ram">RAM</label>
+          <select id="ram">
+            <option value="0">Select RAM</option>
+            <option value="80">16GB DDR5 (+$80)</option>
+            <option value="150">32GB DDR5 (+$150)</option>
+            <option value="300">64GB DDR5 (+$300)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <p>Estimated Price: <strong id="buildPrice">$0.00</strong></p>
+        </div>
+
+        <div style="display:flex;gap:1rem;align-items:center;">
+          <button type="button" id="addBuildBtn" class="btn">Add Custom Build to Cart</button>
+          <button type="reset" class="btn btn-secondary">Reset</button>
+        </div>
+      </form>
+      <p id="buildMessage" style="margin-top:.75rem;display:none"></p>
+    </section>
+
+  </main>
+
+  <div id="sidemenu">
+    <div class="close"><button id="closeMenu">✖</button></div>
+    <a href="index.html">Home</a>
+    <a href="build.html">Build Configurator</a>
+    <a href="peripherals.html">Peripherals</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+</div>
+
+  <!-- Login modal -->
+  <div id="loginModal" class="modal">
+    <div class="panel">
+      <h3>Login</h3>
+      <form id="loginForm">
+        <div class="form-group"><label for="login-user">Username</label><input id="login-user" name="user" required></div>
+        <div class="form-group"><label for="login-pass">Password</label><input id="login-pass" name="pass" type="password" required></div>
+        <div style="display:flex;gap:.5rem;margin-top:.75rem;">
+          <button type="submit" class="btn">Login</button>
+          <button type="button" id="loginCancel" class="btn btn-secondary">Cancel</button>
+        </div>
+        <p id="loginMessage" style="margin-top:.5rem;color:#c00;display:none"></p>
+      </form>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <footer>
+    <p>&copy; 2024 ON-RAI Gaming Setup. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
