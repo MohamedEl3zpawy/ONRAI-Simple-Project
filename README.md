@@ -30,3 +30,4 @@ open index.html
 
 **Mohamed Sameh** — Computer Science Student @ AAST  
 [![GitHub](https://img.shields.io/badge/GitHub-MohamedEl3zpawy-black?style=flat&logo=github)](https://github.com/MohamedEl3zpawy)
+![Preview](images/preview.png)
