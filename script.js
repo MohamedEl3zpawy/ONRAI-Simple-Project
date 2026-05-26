@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const toast = (text) => {
     const el = $('toast');
+    
     if (el) {
       el.textContent    = text;
       el.style.display  = 'block';
@@ -45,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const renderCart = () => {
     const tbody = document.querySelector('#cartTable tbody');
-    // حماية: لو الجدول مش موجود في الصفحة الحالية (زي الهوم)، اخرج فوراً ومتوقفش السكريبت
+ 
     if (!tbody) return; 
 
     const c    = getCart();
@@ -54,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const ship = sub > 0 ? 25 : 0;
     const total = sub + tax + ship;
 
-    tbody.innerHTML = !c.length
+    tbody.innerHTML = !c.length 
       ? '<tr><td colspan="5" style="text-align:center;padding:2rem;color:#999;">Your cart is empty</td></tr>'
       : c.map((item, idx) => `
           <tr>
@@ -239,7 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ── الترتيب الجديد والآمن للتشغيل ── */
   updateCount();
-  setupAddToCartButtons(); // شغلنا الأزرار فوراً قبل أي دالة تانية
+  setupAddToCartButtons();
   setupLogin();
   setupMenu();
   setupSlideshow();
